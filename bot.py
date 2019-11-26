@@ -11,6 +11,7 @@ client = discord.Client()
 my_api_key = os.getenv('GOOGLE_SEARCH_API_KEY')
 my_cse_id = os.getenv('SEARCH_ENGINE_ID')
 
+SEARCH_HISTORY = {}
 
 def google_search(search_term, api_key=my_api_key, cse_id=my_cse_id, **kwargs):
     service = build("customsearch", "v1", developerKey=api_key)
@@ -32,9 +33,6 @@ def google_search_top_5_as_string_message(search_term):
 @client.event
 async def on_ready():
     print('discord bot ready..')
-
-
-SEARCH_HISTORY = {}
 
 
 def save_history():
