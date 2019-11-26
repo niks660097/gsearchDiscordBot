@@ -35,7 +35,7 @@ async def on_ready():
     print('discord bot ready..')
 
 
-def save_history():
+def save_history():#EXTREMELY SLOW, just for testing
     with open('search_history', 'wb') as f:
         pickle.dump(SEARCH_HISTORY, f)
 
