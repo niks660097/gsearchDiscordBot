@@ -8,7 +8,6 @@ from dotenv import load_dotenv
 load_dotenv("./discord.env")
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
-print('DISCORD TOKEN', TOKEN)
 my_api_key = os.getenv('GOOGLE_SEARCH_API_KEY')
 my_cse_id = os.getenv('SEARCH_ENGINE_ID')
 
