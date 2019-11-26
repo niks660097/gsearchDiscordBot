@@ -32,9 +32,6 @@ def google_search_top_5_as_string_message(search_term):
 @client.event
 async def on_ready():
     print('discord bot ready..')
-    print(
-        f'{client.user} is connected.:\n'
-    )
 
 
 SEARCH_HISTORY = {}
