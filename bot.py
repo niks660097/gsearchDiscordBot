@@ -35,20 +35,6 @@ async def on_ready():
     print('discord bot ready..')
 
 
-def save_history():#SLOW and dangerous, just for testing
-    with open('search_history', 'wb') as f:
-        pickle.dump(SEARCH_HISTORY, f)
-
-
-def load_history():
-    global SEARCH_HISTORY
-    try:
-        with open('search_history', 'rb') as f:
-            SEARCH_HISTORY = pickle.load(f)
-    except FileNotFoundError:
-        save_history()
-
-
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
